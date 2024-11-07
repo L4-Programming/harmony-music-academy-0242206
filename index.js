@@ -1,3 +1,2 @@
 // javascript
-
-alert("Hello from index.js!");
+console.log("hello world");
