@@ -1,3 +1,6 @@
+import { validateForm } from "./validateForm.js";
+import { calculateCosts } from "./CalculateCost.js";
+
 // Capture user's input on form submission
 let form = document.querySelector("form");
 
@@ -15,8 +18,10 @@ form.addEventListener("submit", function (event) {
   let userHours = parseInt(document.querySelector("#hoursPerWeek").value);
 
    // Validate the user's input
+  const result = validateForm({ userEmail, userLevel, userHours});
 
-    console.log({ errors });
+
+  console.log({ result, calculateCosts });
 });
 
 
