@@ -1,4 +1,5 @@
 import { displayErrors, validateForm } from "./validateForm.js";
+import { displayResults } from "./displayResults.js";
 import { calculateCosts } from "./CalculateCost.js";
 
 // Capture user's input on form submission
@@ -27,7 +28,11 @@ form.addEventListener("submit", function (event) {
   if (result){
     //calculate the total cost
     const output = calculateCosts(result);
+    
     console.log ({output})
+
+    // Display the total cost to the user
+    displayResults(output);
   } 
 });
 
