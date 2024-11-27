@@ -6,7 +6,7 @@
   </head>
   <body>
     <form class="form-wrapper">
-      <div class="form-section">
+      <div id="results" class="form-section">
         <img
           class="mobile-display"
           src="./assets/harmony-music-academy-logo.svg"
@@ -28,6 +28,7 @@
           <select id="level" name="level" class="form-input">
             <option value="basic">Basic</option>
             <option value="advanced">Advanced</option>
+            <option value="pro">Professional</option>
           </select>
           <div id="level-error"></div>
         </div>
@@ -41,17 +42,20 @@
             placeholder="How many?"
           />
           <div id="hoursPerWeek-error"></div>
+        </div>
 
         <button type="submit" class="submit-btn">Sign up</button>
       </div>
 
-      <div class="form-section form-scale">
+      <div class="form-section">
         <img
           src="./assets/harmony-music-academy-logo.svg"
           alt="Harmony Music Academy logo"
         />
       </div>
     </form>
+    <script type="module" src="./CalculateCost.js"></script>
+    <script type="module" src="./displayResult.js"></script>
     <script type="module" src="./index.js"></script>
   </body>
 </html>
